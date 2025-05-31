@@ -47,7 +47,7 @@ public class Torus extends Shape implements ThreeDimensional, PIRequired, MassCa
 
     @Override
     public double calculateCost(){
-        return gramToKilogram() * PRICE_PER_KG;
+        return Math.ceil(gramToKilogram()) * PRICE_PER_KG;
     }
 
 

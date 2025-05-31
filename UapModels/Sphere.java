@@ -41,12 +41,12 @@ public class Sphere extends Shape implements ThreeDimensional, PIRequired, MassC
 
     @Override
     public double gramToKilogram(){
-        return Math.ceil(getMass()) / DENOMINATOR;
+        return getMass() / DENOMINATOR;
     }
 
     @Override
     public double calculateCost(){
-        return gramToKilogram() * PRICE_PER_KG;
+        return Math.ceil(gramToKilogram()) * PRICE_PER_KG;
     }
 
 }
